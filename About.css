@@ -1020,7 +1020,7 @@
 .u-section-3 .hover > .u-container-layout .u-list-item-4 {
   transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 } .u-section-4 {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/images/56645-min.jpg');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('images/56645-min.jpg');
 }
 
 .u-section-4 .u-sheet-1 {
@@ -1767,7 +1767,7 @@
 
 .u-section-7 .u-image-3 {
   min-height: 553px;
-  background-image: url("/images/56645-min.jpg");
+  background-image: url("images/56645-min.jpg");
   background-position: 50% 50%;
   --animation-custom_in-translate_x: 300px;
   --animation-custom_in-translate_y: 0px;
@@ -2616,7 +2616,7 @@
 
 .u-section-10 .u-image-1 {
   min-height: 476px;
-  background-image: url("/images/sfrt-min.jpg");
+  background-image: url("images/sfrt-min.jpg");
   background-position: 50% 0%;
   --animation-custom_in-translate_x: 300px;
   --animation-custom_in-translate_y: 0px;
