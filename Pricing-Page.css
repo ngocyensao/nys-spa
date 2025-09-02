@@ -42,12 +42,6 @@
 
 .u-section-1 .u-btn-1 {
   background-image: none;
-  border-style: solid;
-  padding: 0;
-}
-
-.u-section-1 .u-btn-2 {
-  background-image: none;
   letter-spacing: 3px;
   font-size: 0.875rem;
   border-style: none;
@@ -164,7 +158,7 @@
 .u-section-3 .u-image-1 {
   min-height: 558px;
   background-position: 50% 100%;
-  background-image: url("images/close-up-hands-applying-cream-leg8.jpg");
+  background-image: url("/images/close-up-hands-applying-cream-leg8.jpg");
   background-size: cover;
 }
 
@@ -177,23 +171,13 @@
 }
 
 .u-section-3 .u-text-1 {
-  margin: 0;
+  margin: 41px 0 0;
 }
 
 .u-section-3 .u-text-2 {
   font-size: 1.25rem;
   line-height: 2.2;
   margin: 30px 0 0;
-}
-
-.u-section-3 .u-text-3 {
-  font-size: 1.125rem;
-  margin: 37px 0 0;
-}
-
-.u-section-3 .u-btn-1 {
-  border-style: solid;
-  padding: 0;
 }
 
 @media (max-width: 1199px) {
@@ -245,6 +229,10 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  .u-section-3 .u-text-2 {
+    font-size: 1.1111111111111112rem;
+  }
 }
 
 @media (max-width: 575px) {
@@ -262,7 +250,6 @@
 .u-section-4 .u-layout-wrap-1 {
   margin-top: 60px;
   margin-bottom: 60px;
-  margin-left: auto;
 }
 
 .u-section-4 .u-layout-cell-1 {
@@ -274,7 +261,7 @@
 }
 
 .u-section-4 .u-text-1 {
-  margin: 0;
+  margin: 39px 0 0;
 }
 
 .u-section-4 .u-text-2 {
@@ -283,30 +270,16 @@
   margin: 30px 0 0;
 }
 
-.u-section-4 .u-text-3 {
-  font-size: 1.125rem;
-  margin: 37px 0 0;
-}
-
-.u-section-4 .u-btn-1 {
-  border-style: solid;
-  padding: 0;
-}
-
 .u-section-4 .u-image-1 {
   min-height: 558px;
   background-position: 50% 50%;
-  background-image: url("images/young-woman-getting-beauty-procedure-spa5.jpg");
+  background-image: url("/images/young-woman-getting-beauty-procedure-spa5.jpg");
   background-size: cover;
 }
 
 @media (max-width: 1199px) {
   .u-section-4 .u-sheet-1 {
     min-height: 579px;
-  }
-
-  .u-section-4 .u-layout-wrap-1 {
-    margin-left: initial;
   }
 
   .u-section-4 .u-layout-cell-1 {
@@ -345,6 +318,10 @@
     padding-right: 10px;
   }
 
+  .u-section-4 .u-text-2 {
+    font-size: 1.1111111111111112rem;
+  }
+
   .u-section-4 .u-image-1 {
     min-height: 528px;
   }
@@ -370,7 +347,7 @@
 .u-section-5 .u-image-1 {
   min-height: 558px;
   background-position: 50% 50%;
-  background-image: url("images/woman-getting-back-massage-from-masseur7.jpg");
+  background-image: url("/images/woman-getting-back-massage-from-masseur7.jpg");
   background-size: cover;
 }
 
@@ -383,7 +360,7 @@
 }
 
 .u-section-5 .u-text-1 {
-  margin: 0;
+  margin: 37px 0 0;
 }
 
 .u-section-5 .u-text-2 {
@@ -394,16 +371,6 @@
 
 .u-section-5 .u-text-3 {
   margin: 20px 0 0;
-}
-
-.u-section-5 .u-text-4 {
-  font-size: 1.125rem;
-  margin: 20px 0 0;
-}
-
-.u-section-5 .u-btn-1 {
-  border-style: solid;
-  padding: 0;
 }
 
 @media (max-width: 1199px) {
@@ -454,6 +421,10 @@
   .u-section-5 .u-container-layout-2 {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .u-section-5 .u-text-2 {
+    font-size: 1.1111111111111112rem;
   }
 }
 
@@ -521,7 +492,7 @@
   white-space: nowrap;
   height: 32px;
   min-height: 16px;
-  width: 188px;
+  width: 248px;
   min-width: 124px;
   margin: 23px auto 0 0;
 }
@@ -547,19 +518,9 @@
   margin: 20px 0 0;
 }
 
-.u-section-6 .u-btn-1 {
-  border-style: solid;
-  padding: 0;
-}
-
-.u-section-6 .u-text-5 {
-  font-size: 1.125rem;
-  margin: 20px 0 0;
-}
-
 .u-section-6 .u-image-1 {
   min-height: 476px;
-  background-image: url("images/sfrt-min.jpg");
+  background-image: url("/images/sfrt-min.jpg");
   background-position: 50% 0%;
 }
 

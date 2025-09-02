@@ -68,11 +68,6 @@
 }
 
 .u-section-1 .u-btn-1 {
-  border-style: solid;
-  padding: 0;
-}
-
-.u-section-1 .u-btn-2 {
   background-image: none;
   letter-spacing: 3px;
   font-size: 0.875rem;
@@ -174,7 +169,7 @@
     width: auto;
   }
 
-  .u-section-1 .u-btn-2 {
+  .u-section-1 .u-btn-1 {
     margin-left: auto;
     margin-right: auto;
   }
@@ -362,7 +357,7 @@
   white-space: nowrap;
   height: 32px;
   min-height: 16px;
-  width: 188px;
+  width: 248px;
   min-width: 124px;
   margin: 23px auto 0 0;
 }
@@ -388,19 +383,9 @@
   margin: 20px 0 0;
 }
 
-.u-section-3 .u-btn-1 {
-  border-style: solid;
-  padding: 0;
-}
-
-.u-section-3 .u-text-5 {
-  font-size: 1.125rem;
-  margin: 20px 0 0;
-}
-
 .u-section-3 .u-image-1 {
   min-height: 476px;
-  background-image: url("images/sfrt-min.jpg");
+  background-image: url("/images/sfrt-min.jpg");
   background-position: 50% 0%;
   --animation-custom_in-translate_x: 300px;
   --animation-custom_in-translate_y: 0px;
