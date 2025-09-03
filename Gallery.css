@@ -64,7 +64,7 @@
 
 .u-section-1 .u-image-1 {
   min-height: 652px;
-  background-image: url("/images/woman-receiving-relaxing-massage-spa3.jpg");
+  background-image: url("images/woman-receiving-relaxing-massage-spa3.jpg");
   --animation-custom_in-translate_x: 0px;
   --animation-custom_in-translate_y: 300px;
   --animation-custom_in-opacity: 0;
@@ -590,7 +590,7 @@
 
 .u-section-4 .u-image-1 {
   min-height: 476px;
-  background-image: url("/images/sfrt-min.jpg");
+  background-image: url("images/sfrt-min.jpg");
   background-position: 50% 0%;
   --animation-custom_in-translate_x: 300px;
   --animation-custom_in-translate_y: 0px;

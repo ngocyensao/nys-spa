@@ -5,6 +5,22 @@
     <meta name="keywords" content="Beauty Salon, ​Skincare, All Treatments, Stone Massage, Welcome!">
     <meta name="description" content="">
     <title>Home</title>
+<script>
+    function gdprConfirmed() {
+        return true;
+    }
+    if (gdprConfirmed()) {
+    document.write("\
+    <!-- Google Tag Manager -->\
+    <gascript>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\
+    })(window,document,'script','dataLayer',' GTM-TVF7C9N6');</gascript>\
+    <!-- End Google Tag Manager -->\
+    ".replace(/gascript/g, 'script'));
+    }
+    </script>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="index.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
@@ -24,16 +40,223 @@
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
-		"name": "",
-		"logo": "/images/_2025-09-02_142639_1641.png"
+		"name": "Site1",
+		"logo": "images/_2025-09-02_142639_1641.png"
 }</script>
     <meta name="theme-color" content="#e3b377">
     <meta property="og:title" content="Home">
+    <meta property="og:description" content="">
     <meta property="og:type" content="website">
-  <meta name="referrer" content="origin"><meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="/" data-include-products="false" class="u-body u-clearfix u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-8229"><div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+  <meta name="referrer" content="origin"><script>
+    window.recaptchaRenderedV2 = false;
+    window.recaptchaFallback = true;
+    window.recaptchaSiteKeyV2 = '6LdTOLwrAAAAAG446KZ_AJjkSjYdg15kDfh3lbf7';
+
+    function gdprConfirmed() {
+        return true;
+    }
+
+    function dynamicLoadScript() {
+        var script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js?render=6Lc4QLwrAAAAAKAIRUk_MomlDnoDuN38S8D7-u3D';
+        script.async = true;
+        script.onload = function () {
+            var event = new CustomEvent("recaptchaLoaded");
+            document.dispatchEvent(event);
+        };
+        document.body.appendChild(script);
+    }
+
+    function showRecaptchaError(error) {
+        error = error || '';
+        var formError = document.querySelector('.u-form-send-error');
+
+        if (formError) {
+            formError.innerText = 'Site Owner Error: ' + error.replace(/:[\s\S]*/, '');
+            formError.style.display = 'block';
+        }
+
+        console.error('Error in grecaptcha: ', error);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var confirmButtons = document.querySelectorAll('.u-cookies-consent .u-button-confirm');
+        confirmButtons.forEach(function (button) {
+            button.onclick = dynamicLoadScript;
+        });
+    });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            if (!gdprConfirmed()) {
+                return;
+            }
+            dynamicLoadScript();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("recaptchaLoaded", function() {
+            if (!gdprConfirmed()) {
+                return;
+            }
+
+            (function (grecaptcha, sitekey, actions) {
+                var recaptcha = {
+                    execute: function (action, submitFormCb) {
+                        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') {
+                            showRecaptchaError('reCAPTCHA script failed to load.');
+                            return;
+                        }
+
+                        try {
+                            grecaptcha.execute(sitekey, {action: action}).then((token) => {
+                                if (!token) {
+                                    throw new Error('Empty token received from reCAPTCHA');
+                                }
+
+                                var forms = document.getElementsByTagName('form');
+
+                                for (var i = 0; i < forms.length; i++) {
+                                    var response = forms[i].querySelector('[name="recaptchaResponse"]');
+
+                                    if (!response) {
+                                        response = document.createElement('input');
+                                        response.setAttribute('type', 'hidden');
+                                        response.setAttribute('name', 'recaptchaResponse');
+                                        forms[i].appendChild(response);
+                                    }
+
+                                    response.value = token;
+                                }
+
+                                submitFormCb();
+                            }).catch((e) => {
+                                showRecaptchaError(e.message);
+                            });
+                        } catch (e) {
+                            showRecaptchaError(e.message);
+                        }
+                    },
+
+                    executeContact: function (submitFormCb) {
+                        recaptcha.execute(actions['contact'], submitFormCb);
+                    }
+                };
+
+                window.recaptchaObject = recaptcha;
+                window.grecaptchaObject = grecaptcha;
+            })(
+                grecaptcha,
+                
+                '6Lc4QLwrAAAAAKAIRUk_MomlDnoDuN38S8D7-u3D',
+                {'contact': 'contact'}
+            );
+        });
+    </script>
+
+    <script>
+    window.showRecaptchaV2 = function (form) {
+        if (!form || !form.length) {
+            return;
+        }
+        if (typeof window.grecaptchaObject === 'undefined' || !window.grecaptchaObject) {
+            return;
+        }
+
+        const formEl = form[0];
+
+        let container = document.getElementById('recaptcha-v2-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'recaptcha-v2-container';
+            formEl.parentElement.appendChild(container);
+        }
+
+        let tokenReceived = false;
+        let timeoutHandle;
+
+        if (window.recaptchaRenderedV2 === false || typeof window.recaptchaRenderedV2 === 'undefined') {
+            window.recaptchaRenderedV2 = window.grecaptchaObject.render('recaptcha-v2-container', {
+                'sitekey': window.recaptchaSiteKeyV2,
+                'size': 'invisible',
+                'callback': function (token) {
+                    clearTimeout(timeoutHandle);
+
+                    if (!token) {
+                        showRecaptchaError('reCAPTCHA v2 token was empty. Please try again.');
+                        return;
+                    }
+
+                    tokenReceived = true;
+
+                    let recaptchaResponseV2 = formEl.querySelector('input[name="recaptchaResponseV2"]');
+
+                    if (!recaptchaResponseV2) {
+                        recaptchaResponseV2 = document.createElement('input');
+                        recaptchaResponseV2.type = 'hidden';
+                        recaptchaResponseV2.name = 'recaptchaResponseV2';
+                        formEl.appendChild(recaptchaResponseV2);
+                    }
+
+                    recaptchaResponseV2.value = token;
+
+                    if (window.recaptchaSiteKeyV2) {
+                        let siteKeyInput = formEl.querySelector('input[name="siteKey"]');
+
+                        if (siteKeyInput) {
+                            siteKeyInput.value = window.recaptchaSiteKeyV2;
+                        }
+                    }
+
+                    document.querySelectorAll('.u-form-send-error').forEach(el => {
+                        el.style.display = 'none';
+                    });
+
+                    const event = new CustomEvent('submit', {
+                        detail: { recaptchaPassed: true },
+                        bubbles: true,
+                        cancelable: true,
+                    });
+
+                    formEl.dispatchEvent(event);
+                },
+                'error-callback': function () {
+                    clearTimeout(timeoutHandle);
+                    showRecaptchaError('reCAPTCHA v2 error. Please try again.');
+                },
+                'expired-callback': function () {
+                    clearTimeout(timeoutHandle);
+                }
+            });
+
+            window.grecaptchaObject.reset(window.recaptchaRenderedV2);
+
+            setTimeout(() => {
+                window.grecaptchaObject.execute(window.recaptchaRenderedV2);
+            }, 300);
+
+            timeoutHandle = setTimeout(function () {
+                if (!tokenReceived) {
+                    showRecaptchaError('The Contact Form could not be submitted because Google reCAPTCHA v3 detected unusual activity from your connection. Please try again later, or complete the reCAPTCHA v2 challenge if it appears.');
+                }
+            }, 120000);
+        } else {
+            window.grecaptchaObject.reset(window.recaptchaRenderedV2);
+
+            setTimeout(() => {
+                window.grecaptchaObject.execute(window.recaptchaRenderedV2);
+            }, 300);
+        }
+    };
+    </script>
+<meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="true" class="u-body u-clearfix u-xl-mode" data-lang="en"><!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id= GTM-TVF7C9N6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><header class="u-clearfix u-header u-header" id="sec-8229"><div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xl u-sheet-1">
         <a href="#" class="u-enable-responsive u-image u-logo u-image-1" data-image-width="816" data-image-height="815">
-          <img src="/images/_2025-09-02_142639_1641.png" class="u-logo-image u-logo-image-1">
+          <img src="images/_2025-09-02_142639_1641.png" class="u-logo-image u-logo-image-1">
         </a>
         <nav class="u-dropdown-icon u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="SM" role="navigation">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
@@ -44,28 +267,28 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1" role="menubar"><li class="u-nav-item" role="none"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/" style="padding: 10px 0px;" role="menuitem">Home</a>
-</li><li class="u-nav-item" role="none"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 0px;" tabindex="-1" role="menuitem" aria-haspopup="true" aria-expanded="false">Pages</a><div class="u-nav-popup"><ul class="u-h-spacing-24 u-nav u-unstyled u-v-spacing-14 u-nav-2" role="menu" aria-label="Pages menu"><li class="u-nav-item" role="none"><a class="u-active-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-palette-1-light-3" href="/About.html" role="menuitem">About Us</a>
-</li><li class="u-nav-item" role="none"><a class="u-active-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-palette-1-light-3" href="/Services.html" role="menuitem">Services</a>
-</li><li class="u-nav-item" role="none"><a class="u-active-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-palette-1-light-3" href="/Pricing-Page.html" role="menuitem">Pricing</a>
-</li><li class="u-nav-item" role="none"><a class="u-active-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-palette-1-light-3" href="/Gallery.html" role="menuitem">Gallery</a>
+            <ul role="menubar" class="u-nav u-spacing-30 u-unstyled u-nav-1"><li role="none" class="u-nav-item"><a role="menuitem" class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="./" style="padding: 10px 0px;">Home</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="About.html" style="padding: 10px 0px;">About Us</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="Services.html" style="padding: 10px 0px;">Services</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="Pricing-Page.html" style="padding: 10px 0px;">Pricing</a>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="products/men-s-wet-wipes-3.html" style="padding: 10px 0px;">Wipes</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="Contact.html" style="padding: 10px 0px;">Contact Us</a><div class="u-nav-popup"><ul role="menu" class="u-border-2 u-h-spacing-0 u-nav u-unstyled u-v-spacing-10 u-white u-nav-2" aria-label="Contact Us menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-active-palette-1-light-1 u-button-style u-hover-palette-1-light-1 u-nav-link u-palette-1-light-3" href="Gallery.html">Gallery</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item" role="none"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/Contact.html" style="padding: 10px 0px;" role="menuitem">Contact Us</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse" id="e2a0" role="region" aria-label="Menu panel">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close u-menu-close-1" tabindex="-1" aria-label="Close menu"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link">Pages</a><div class="u-nav-popup"><ul class="u-h-spacing-24 u-nav u-unstyled u-v-spacing-14 u-nav-4"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/About.html">About Us</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Services.html">Services</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Pricing-Page.html">Pricing</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Gallery.html">Gallery</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3" role="menubar"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="./">Home</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="About.html">About Us</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="Services.html">Services</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="Pricing-Page.html">Pricing</a>
+</li><li role="none" class="u-nav-item"><a tabindex="-1" role="menuitem" class="u-button-style u-nav-link" href="products/men-s-wet-wipes-3.html">Wipes</a>
+</li><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="Contact.html">Contact Us</a><div class="u-nav-popup"><ul role="menu" class="u-h-spacing-24 u-nav u-unstyled u-v-spacing-14 u-nav-4" aria-label="Contact Us menu"><li role="none" class="u-nav-item"><a role="menuitem" class="u-button-style u-nav-link" href="Gallery.html">Gallery</a>
 </li></ul>
 </div>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/Contact.html">Contact Us</a>
 </li></ul>
               </div>
             </div>
@@ -79,24 +302,27 @@
                         display: block;
                     }
                 }</style>
-        </nav>
-        <a href="" class="u-active-grey-70 u-align-center u-btn u-button-style u-custom-font u-enable-responsive u-font-pt-sans u-hidden-xs u-hover-grey-70 u-palette-1-dark-3 u-btn-1" data-animation-name="flipIn" data-animation-duration="1500" data-animation-delay="1000" data-animation-direction="X">contact Us</a>
+        </nav><!--shopping_cart-->
+        <a class="u-shopping-cart u-shopping-cart-1" href="#popup-d818"><span class="u-icon u-shopping-cart-icon"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-ac08"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-ac08"><path d="M14.5,3l-2.1,5H6.1L5.9,7.6L4,3H14.5 M0,0v1h2.1L5,8l-2,4h11v-1H4.6l1-2H13l3-7H3.6L2.8,0H0z M12.5,13
+	c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S13.3,13,12.5,13L12.5,13z M4.5,13C3.7,13,3,13.7,3,14.5S3.7,16,4.5,16
+	S6,15.3,6,14.5S5.3,13,4.5,13L4.5,13z"></path></svg><span class="u-icon-circle u-palette-1-base u-shopping-cart-count" style="font-size: 0.75rem;"><!--shopping_cart_count-->0<!--/shopping_cart_count--></span></span>
+        </a><!--/shopping_cart-->
       </div></header> 
     <section class="u-clearfix u-section-1" id="sec-f304">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-palette-1-light-2 u-shape u-shape-rectangle u-shape-1" data-animation-name="flipIn" data-animation-duration="1750" data-animation-delay="500" data-animation-direction="X"></div>
-        <div class="data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width-xs u-gutter-0 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-row">
               <div class="u-size-32 u-size-60-md">
                 <div class="u-layout-col">
                   <div class="u-container-style u-layout-cell u-left-cell u-size-40 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500">
-                    <div class="u-container-layout u-valign-top u-container-layout-1">
-                      <img class="u-expanded-width u-image u-image-1" src="/images/gjh.jpg" data-image-width="1200" data-image-height="800">
+                    <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-1">
+                      <img class="custom-expanded u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-image u-image-1" src="images/gjh.jpg" data-image-width="1200" data-image-height="800">
                     </div>
                   </div>
                   <div class="u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
-                    <div class="u-container-layout u-valign-top u-container-layout-2">
+                    <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-2">
                       <h3 class="u-text u-text-1">your gift certificate</h3>
                       <p class="u-text u-text-2"> Pamper yourself and your loved ones. Gift certificates can be used for spa, massage, and skincare treatments, offering both relaxation and beauty.</p>
                       <a href="#" class="u-active-grey-70 u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-pt-sans u-hover-grey-70 u-palette-1-dark-3 u-radius-6 u-btn-1"> Gift Certificates Available</a>
@@ -107,14 +333,14 @@
               <div class="u-size-28 u-size-60-md">
                 <div class="u-layout-col">
                   <div class="u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-direction="X" data-animation-delay="750">
-                    <div class="u-container-layout u-valign-top u-container-layout-3">
+                    <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-3">
                       <h5 class="u-custom-font u-font-montserrat u-text u-text-3"> Health &amp; Beauty</h5>
                       <h1 class="u-text u-text-4">Beauty Salon</h1>
                     </div>
                   </div>
                   <div class="u-container-style u-layout-cell u-right-cell u-size-40 u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                     <div class="u-container-layout u-container-layout-4">
-                      <img class="u-expanded-width u-image u-image-2" src="/images/h.jpg" data-image-width="900" data-image-height="714">
+                      <img class="u-expanded-width u-image u-image-2" src="images/h.jpg" data-image-width="900" data-image-height="714">
                     </div>
                   </div>
                 </div>
@@ -125,22 +351,20 @@
       </div>
     </section>
     <section class="u-clearfix u-palette-1-light-2 u-section-2" id="carousel_ce4b">
-      <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
             <div class="u-layout-row">
               <div class="u-container-style u-layout-cell u-shape-rectangle u-size-30 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500">
-                <div class="u-container-layout u-valign-bottom u-container-layout-1">
+                <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-sm u-valign-bottom-xs u-container-layout-1">
                   <h5 class="u-text u-text-default u-text-1"> The therapists are highly professional. My skin felt instantly hydrated and glowing after the facial.</h5>
                   <div class="u-image u-image-circle u-image-1" alt="" data-image-width="1200" data-image-height="800" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750"></div>
                 </div>
               </div>
               <div class="u-align-justify u-container-style u-layout-cell u-size-30 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <p class="u-text u-text-default u-text-2">Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read. Considered use dispatched melancholy sympathize discretion led.&nbsp;<br>
+                <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-container-layout-2">
+                  <p class="u-text u-text-2">Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read. Considered use dispatched melancholy sympathize discretion led.&nbsp;<br>
                     <br>Oh feel if up to till like.&nbsp;He an thing rapid these after going drawn or. Timed she his law the spoil round defer. In surprise concerns informed betrayed he learning is ye.
-                  </p>
-                  <p class="u-text u-text-3">Image from <a href="https://freepik.com/photos/woman" class="u-active-none u-border-1 u-border-active-palette-4-dark-1 u-border-grey-75 u-border-hover-palette-4-dark-1 u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-link u-button-style u-hover-none u-none u-radius-0 u-text-body-color u-top-left-radius-0 u-top-right-radius-0 u-btn-1">Freepik</a>
                   </p>
                 </div>
               </div>
@@ -160,11 +384,9 @@
                     <div class="u-container-layout"></div>
                   </div>
                   <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                    <div class="u-container-layout u-valign-top u-container-layout-2">
+                    <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-2">
                       <h2 class="u-text u-text-1"> Skincare</h2>
                       <p class="u-text u-text-2"> The atmosphere is calm and relaxing. After the treatment, I felt completely refreshed. I will definitely come back again.</p>
-                      <p class="u-text u-text-3">Images from <a href="https://freepik.com/photos/woman" class="u-active-none u-border-1 u-border-active-palette-4-dark-1 u-border-grey-75 u-border-hover-palette-4-dark-1 u-border-no-left u-border-no-right u-border-no-top u-bottom-left-radius-0 u-bottom-right-radius-0 u-btn u-button-link u-button-style u-hover-none u-none u-radius-0 u-text-body-color u-top-left-radius-0 u-top-right-radius-0 u-btn-1">Freepik</a>
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -174,11 +396,11 @@
                   <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-3">
                     <div class="u-container-layout u-container-layout-3">
                       <div class="u-align-left u-expanded-height-sm u-expanded-height-xs u-palette-1-light-2 u-shape u-shape-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"></div>
-                      <img src="/images/ghgh.jpg" alt="" class="u-align-left u-image u-image-2" data-image-width="700" data-image-height="619" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                      <img src="images/ghgh.jpg" alt="" class="u-align-left u-image u-image-2" data-image-width="700" data-image-height="619" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                       <div class="u-container-style u-group u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                         <div class="u-container-layout u-valign-middle u-container-layout-4">
-                          <p class="u-text u-text-4"> I bought a gift certificate for my friend’s birthday. She absolutely loved it and said it was the most thoughtful surprise.</p>
-                          <a href="#" class="u-active-grey-70 u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-pt-sans u-hover-grey-70 u-palette-1-dark-3 u-radius-6 u-btn-2"> Our Treatments</a>
+                          <p class="u-text u-text-3"> I bought a gift certificate for my friend’s birthday. She absolutely loved it and said it was the most thoughtful surprise.</p>
+                          <a href="#" class="u-active-grey-70 u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-pt-sans u-hover-grey-70 u-palette-1-dark-3 u-radius-6 u-btn-1"> Our Treatments</a>
                         </div>
                       </div>
                     </div>
@@ -258,7 +480,7 @@
                   </div>
                   <div class="u-container-style u-layout-cell u-right-cell u-size-40 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
                     <div class="u-container-layout u-valign-top u-container-layout-2">
-                      <img class="u-expanded-width u-image u-image-1" src="/images/errre.jpg" data-image-width="695" data-image-height="1021">
+                      <img class="u-expanded-width u-image u-image-1" src="images/errre.jpg" data-image-width="695" data-image-height="1021">
                     </div>
                   </div>
                 </div>
@@ -267,7 +489,7 @@
                 <div class="u-layout-col">
                   <div class="u-container-align-left u-container-style u-layout-cell u-left-cell u-size-40 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="750">
                     <div class="u-container-layout u-valign-top u-container-layout-3">
-                      <img class="u-expanded-width u-image u-image-2" src="/images/jh.jpg" data-image-width="700" data-image-height="700">
+                      <img class="u-expanded-width u-image u-image-2" src="images/jh.jpg" data-image-width="700" data-image-height="700">
                     </div>
                   </div>
                   <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-4" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
@@ -361,7 +583,7 @@
               <div class="u-container-align-left u-container-style u-layout-cell u-size-24-lg u-size-24-xl u-size-33-md u-size-33-sm u-size-33-xs u-layout-cell-1">
                 <div class="u-container-layout u-valign-top u-container-layout-1">
                   <a href="" class="u-image u-logo u-image-1" data-image-width="816" data-image-height="815">
-                    <img src="/images/_2025-09-02_142639_1641.png" class="u-logo-image u-logo-image-1">
+                    <img src="images/_2025-09-02_142639_1641.png" class="u-logo-image u-logo-image-1">
                   </a>
                   <h4 class="u-align-left u-text u-text-default u-text-1"> Join Our Newsletter</h4>
                   <div class="custom-expanded u-align-center u-form u-form-1">
@@ -378,6 +600,7 @@
                       <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
                       <input type="hidden" value="" name="recaptchaResponse">
                       <input type="hidden" name="formServices" value="8fb6bb94-dec5-d3b5-1a26-ff8e2db2ede4">
+                      <input type="hidden" name="siteKey" value="6Lc4QLwrAAAAAKAIRUk_MomlDnoDuN38S8D7-u3D">
                     </form>
                   </div>
                 </div>
@@ -398,9 +621,9 @@
 	L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M27.557,26c-3.859,0-7-3.141-7-7s3.141-7,7-7s7,3.141,7,7
 	S31.416,26,27.557,26z"></path></svg></span>&nbsp;​​11 Vân Đồn, Phường Nại Hiên Đông, Quận Sơn Trà, Đà Nẵng VN
                   </p>
-                  <p class="u-align-left u-text u-text-default u-text-5"><span class="u-file-icon u-icon u-text-palette-1-light-1"><img src="/images/1257-7113d5f6.png" alt=""></span>&nbsp; <a href="tel:+1234567890" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-body-alt-color u-text-hover-palette-1-base u-btn-6">+84 097 14 36380</a>
+                  <p class="u-align-left u-text u-text-default u-text-5"><span class="u-file-icon u-icon u-text-palette-1-light-1"><img src="images/1257-7113d5f6.png" alt=""></span>&nbsp; <a href="tel:+1234567890" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-body-alt-color u-text-hover-palette-1-base u-btn-6">+84 097 14 36380</a>
                   </p>
-                  <a href="mailto:hi@email.com" class="u-active-none u-align-left u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-body-alt-color u-text-hover-palette-1-base u-btn-7"><span class="u-file-icon u-icon u-text-palette-1-light-1"><img src="/images/2099199-980dfc25.png" alt=""></span>&nbsp;support@nys.vn
+                  <a href="mailto:hi@email.com" class="u-active-none u-align-left u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-body-alt-color u-text-hover-palette-1-base u-btn-7"><span class="u-file-icon u-icon u-text-palette-1-light-1"><img src="images/2099199-980dfc25.png" alt=""></span>&nbsp;support@nys.vn
                   </a>
                 </div>
               </div>
@@ -410,5 +633,206 @@
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80"> This site was created with Nicepage <a href="https://nicepage.com/html-website-builder">HTML Website Builder</a>
     </section>
-  
+  <section class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-payment-dialog u-valign-middle u-dialog-section-11" id="popup-d818">
+      <div class="u-align-center u-container-style u-dialog u-radius-25 u-shape-round u-white u-dialog-1">
+        <div class="u-container-layout u-valign-top u-container-layout-1">
+          <h5 class="u-align-left u-text u-text-1">Buy Now</h5>
+          <div class="u-expanded-width u-products u-products-1" data-site-sorting-prop="created" data-site-sorting-order="desc" data-items-per-page="1">
+            <div class="u-list-control"></div>
+            <div class="u-repeater u-repeater-1">
+              <!--product_item--><div class="u-container-style u-products-item u-repeater-item">
+                <div class="u-container-layout u-similar-container u-container-layout-2">
+                  <h5 class="u-align-left u-product-control u-text u-text-2">
+                    <a class="u-product-title-link" href="#">Product 1 Title</a>
+                  </h5>
+                  <div class="u-align-left u-product-control u-product-desc u-text u-text-3">
+                    <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+                  </div>
+                  <div class="u-align-left u-product-control u-product-quantity u-product-quantity-1">
+                    <div class="u-hidden u-quantity-label">Quantity</div>
+                    <div class="u-border-1 u-border-grey-30 u-quantity-input u-radius-50">
+                      <a class="disabled minus u-button-style u-quantity-button u-text-body-color">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                      </a>
+                      <input class="u-input" type="text" value="1" pattern="[0-9]+">
+                      <a class="plus u-button-style u-quantity-button u-text-body-color">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="m 4 8 h 8 M 8 4 v 8" fill="none" stroke="currentColor" stroke-width="1" fill-rule="evenodd"></path></svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div data-add-zero-cents="true" class="u-align-left u-product-control u-product-price u-product-price-1">
+                    <div class="u-price-wrapper u-spacing-10">
+                      <div class="u-old-price" style="text-decoration: line-through !important;">$20.00</div>
+                      <div class="u-price" style="font-size: 1.25rem; font-weight: 700;">$17.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div><!--/product_item-->
+            </div>
+            <div class="u-list-control"></div>
+          </div>
+          <div class="u-expanded-width u-payment-services u-tab-links-align-justify u-tab-payment u-tab-vertical u-tabs u-payment-services-1" data-payment-order-approved-message="Your order has been approved. Thank you!" data-payment-order-cancelled-message="Unable to process your order. Please try again later.">
+            <ul class="u-tab-list u-unstyled" role="tablist"><li class="u-tab-item" role="presentation"><a class="active u-active-grey-10 u-button-style u-payment-paypal u-tab-link u-text-body-color" id="link-tab-9cb3" href="#tab-9cb3" role="tab" aria-controls="tab-9cb3" aria-selected="true"><input type="radio" class="u-field-input u-grey-15 u-radius-15" name="payment-group" checked="checked"><span>Paypal</span><svg class="u-svg-content" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"><path fill="#009EE3" d="M11,5.9H18c3.8,0,5.2,1.9,4.9,4.7c-0.3,4.7-3.2,7.2-6.9,7.2h-1.9c-0.5,0-0.8,0.3-0.9,1.3l-0.8,4.3
+  c-0.1,0.3-0.2,0.5-0.5,0.6H7.6c-0.4,0-0.5-0.3-0.4-1l2.6-16C9.9,6.3,10.2,5.9,11,5.9z"></path><path fill="#113984" d="M6.7,0h7.1c2,0,4.3,0.1,5.9,1.5c1.1,0.9,1.6,2.4,1.5,4c-0.4,5.4-3.7,8.5-8,8.5H9.6c-0.6,0-0.9,0.4-1.2,1.5
+  l-0.9,5.1C7.4,21,7.3,21.3,7,21.3H2.6C2,21.3,1.9,21,2,20.1L5.2,1.3C5.3,0.4,5.7,0,6.7,0z"></path><path fill="#172C70" d="M8.6,14.8l1.3-7.9c0.1-0.7,0.5-1,1.3-1h7.1c1.2,0,2.1,0.2,2.8,0.5c-0.7,4.8-3.8,7.5-7.9,7.5H9.6
+  C9.1,13.9,8.8,14.1,8.6,14.8z"></path></svg>
+</a>
+</li><li class="u-tab-item" role="presentation"><a class="u-active-grey-10 u-button-style u-payment-stripe u-tab-link u-text-body-color" id="link-tab-ab80" href="#tab-ab80" role="tab" aria-controls="tab-ab80" aria-selected="false"><input type="radio" class="u-field-input u-grey-15 u-radius-15" name="payment-group"><span>Stripe</span><svg class="u-svg-content" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24"><path fill="#635BFF" d="M14,9.2c-2.3-0.8-3.4-1.5-3.4-2.4c0-0.8,0.8-1.3,2-1.3c2.3,0,4.7,0.8,6.4,1.6l0.9-5.5
+  c-1.3-0.5-4-1.6-7.7-1.6C9.6,0,7.5,0.7,5.8,1.9C4.1,3.2,3.4,4.9,3.4,7.2c0,4,2.6,5.7,6.8,7.2c2.7,0.9,3.6,1.6,3.6,2.5
+  c0,0.9-0.9,1.6-2.4,1.6c-1.9,0-5.2-0.9-7.3-2.1L3,22c1.8,0.9,5.1,2,8.7,2c2.8,0,5.1-0.7,6.6-1.9c1.8-1.3,2.7-3.2,2.7-5.7
+  C20.9,12.3,18.2,10.7,14,9.2L14,9.2z"></path></svg>
+</a>
+</li></ul>
+            <div class="u-tab-content">
+              <div class="u-container-style u-payment-paypal u-tab-active u-tab-pane" id="tab-9cb3" role="tabpanel" aria-labelledby="link-tab-9cb3">
+                <div class="u-container-layout u-payment-services-inner u-container-layout-3">Loading...</div>
+              </div>
+              <div class="u-container-style u-payment-stripe u-tab-pane" id="tab-ab80" role="tabpanel" aria-labelledby="link-tab-ab80">
+                <div class="u-container-layout u-container-layout-4">
+                  <a href="#" class="u-btn u-button-style u-stripe-button u-btn-1">Pay with Stripe</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="u-dialog-close-button u-icon u-text-grey-40 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-efe9"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-efe9"><rect x="7" y="0" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3138 8.0002)" width="2" height="16"></rect><rect x="0" y="7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.3138 8.0002)" width="16" height="2"></rect></svg></button>
+      </div>
+    </section><style>.u-dialog-section-11 .u-dialog-1 {
+  width: 570px;
+  min-height: 578px;
+  height: auto;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+  margin: 60px auto;
+}
+
+.u-dialog-section-11 .u-container-layout-1 {
+  padding: 34px 35px;
+}
+
+.u-dialog-section-11 .u-text-1 {
+  font-weight: 700;
+  margin: 0 165px 0 0;
+}
+
+.u-dialog-section-11 .u-products-1 {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.u-dialog-section-11 .u-repeater-1 {
+  grid-template-columns: 100%;
+  min-height: 206px;
+  grid-gap: 10px;
+}
+
+.u-dialog-section-11 .u-container-layout-2 {
+  padding: 0 0 30px;
+}
+
+.u-dialog-section-11 .u-text-2 {
+  background-image: none;
+  margin: 0;
+}
+
+.u-dialog-section-11 .u-text-3 {
+  font-size: 0.875rem;
+  margin: 20px 0 0;
+}
+
+.u-dialog-section-11 .u-product-quantity-1 {
+  width: 125px;
+  margin: 30px auto 0 0;
+}
+
+.u-dialog-section-11 .u-product-price-1 {
+  margin: -34px 0 0 auto;
+}
+
+.u-dialog-section-11 .u-payment-services-1 {
+  min-height: 250px;
+  min-width: 50px;
+  margin: 0;
+}
+
+.u-dialog-section-11 .u-container-layout-3 {
+  padding: 20px 0 0;
+}
+
+.u-dialog-section-11 .u-container-layout-4 {
+  padding: 20px 0 0;
+}
+
+.u-dialog-section-11 .u-btn-1 {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.u-dialog-section-11 .u-icon-1 {
+  width: 20px;
+  height: 20px;
+  left: auto;
+  top: 36px;
+  position: absolute;
+  right: 35px;
+  padding: 0;
+}
+
+@media (max-width: 1199px) {
+  .u-dialog-section-11 .u-text-1 {
+    margin-right: 165px;
+  }
+
+  .u-dialog-section-11 .u-payment-services-1 {
+    margin-right: initial;
+    margin-left: initial;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-dialog-section-11 .u-container-layout-1 {
+    padding: 30px;
+  }
+
+  .u-dialog-section-11 .u-container-layout-3 {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .u-dialog-section-11 .u-container-layout-4 {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .u-dialog-section-11 .u-icon-1 {
+    top: 32px;
+    right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-dialog-section-11 .u-dialog-1 {
+    width: 540px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-dialog-section-11 .u-dialog-1 {
+    width: 340px;
+  }
+
+  .u-dialog-section-11 .u-container-layout-1 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .u-dialog-section-11 .u-text-1 {
+    margin-right: 5px;
+  }
+
+  .u-dialog-section-11 .u-icon-1 {
+    right: 20px;
+  }
+}</style>
 </body></html>
