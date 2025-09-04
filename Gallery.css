@@ -7,6 +7,7 @@
   height: 332px;
   margin-top: 0;
   margin-bottom: 0;
+  --color-var: #8aa586;
 }
 
 .u-section-1 .u-shape-2 {
@@ -229,6 +230,7 @@
 } .u-section-2 {
   background-image: none;
   min-height: 1555px;
+  --color-var: #8aa586;
 }
 
 .u-section-2 .u-group-1 {
@@ -408,6 +410,7 @@
   }
 } .u-section-3 {
   background-image: none;
+  --color-var: #8aa586;
 }
 
 .u-section-3 .u-sheet-1 {
@@ -493,6 +496,7 @@
   }
 } .u-section-4 {
   background-image: none;
+  --color-var: #8aa586;
 }
 
 .u-section-4 .u-sheet-1 {
