@@ -46135,6 +46135,7 @@ a.u-link.u-text-hover-color-var:hover {
   font-weight: 700;
   font-size: 1rem;
   text-transform: uppercase;
+  background-image: none;
 }
 
 .u-header .u-nav-2 {
