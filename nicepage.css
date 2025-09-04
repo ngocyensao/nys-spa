@@ -46113,7 +46113,7 @@ a.u-link.u-text-hover-color-var:hover {
 }
 
 .u-header .u-sheet-1 {
-  min-height: 87px;
+  min-height: 227px;
 }
 
 .u-header .u-image-1 {
@@ -46182,7 +46182,9 @@ a.u-link.u-text-hover-color-var:hover {
 }
 
 .u-header .u-custom-html-1 {
-  margin: 25px 52px 2px 0;
+  height: auto;
+  min-height: 140px;
+  margin: -55px 0 60px 937px;
 }
 @media (max-width: 1199px) {
   .u-header .u-shopping-cart-1 {
@@ -46191,8 +46193,7 @@ a.u-link.u-text-hover-color-var:hover {
   }
 
   .u-header .u-custom-html-1 {
-    margin-right: 0;
-    margin-bottom: 1px;
+    margin: -55px 0 23px 737px;
   }
 }
 @media (max-width: 991px) {
@@ -46220,6 +46221,7 @@ a.u-link.u-text-hover-color-var:hover {
   .u-header .u-custom-html-1 {
     margin-top: 86px;
     margin-bottom: 5px;
+    margin-left: 517px;
   }
 }
 @media (max-width: 767px) {
@@ -46247,6 +46249,7 @@ a.u-link.u-text-hover-color-var:hover {
   .u-header .u-custom-html-1 {
     margin-top: 54px;
     margin-bottom: 1px;
+    margin-left: 337px;
   }
 }
 @media (max-width: 575px) {
@@ -46281,6 +46284,7 @@ a.u-link.u-text-hover-color-var:hover {
   .u-header .u-custom-html-1 {
     margin-top: 86px;
     margin-bottom: 0;
+    margin-left: 137px;
   }
 }
  .u-footer {

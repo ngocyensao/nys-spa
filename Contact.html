@@ -305,12 +305,15 @@
                     }
                 }</style>
         </nav><!--shopping_cart-->
-        <a class="u-shopping-cart u-shopping-cart-1" data-payment-service="{&quot;id&quot;:&quot;8764302cba0fa58be8e53c96d1e856b7&quot;,&quot;formServices&quot;:[&quot;8fb6bb94-dec5-d3b5-1a26-ff8e2db2ede4&quot;],&quot;paymentMethods&quot;:[{&quot;id&quot;:&quot;b2168dbc55d7747d587b820f1134e2c0&quot;,&quot;clientId&quot;:&quot;&quot;,&quot;type&quot;:&quot;paypal&quot;,&quot;disableFunding&quot;:&quot;&quot;}],&quot;userToken&quot;:&quot;181d71e6-871f-47e2-8e9a-ba422507b34a&quot;}" href="#popup-d818"><span class="u-icon u-shopping-cart-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-ac08"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-ac08"><path d="M14.5,3l-2.1,5H6.1L5.9,7.6L4,3H14.5 M0,0v1h2.1L5,8l-2,4h11v-1H4.6l1-2H13l3-7H3.6L2.8,0H0z M12.5,13
+        <a class="u-hidden-block u-shopping-cart u-shopping-cart-1" data-payment-service="{&quot;id&quot;:&quot;8764302cba0fa58be8e53c96d1e856b7&quot;,&quot;formServices&quot;:[&quot;8fb6bb94-dec5-d3b5-1a26-ff8e2db2ede4&quot;],&quot;paymentMethods&quot;:[{&quot;id&quot;:&quot;b2168dbc55d7747d587b820f1134e2c0&quot;,&quot;clientId&quot;:&quot;&quot;,&quot;type&quot;:&quot;paypal&quot;,&quot;disableFunding&quot;:&quot;&quot;}],&quot;userToken&quot;:&quot;181d71e6-871f-47e2-8e9a-ba422507b34a&quot;}" href="#popup-d818"><span class="u-icon u-shopping-cart-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 16 16" style=""><use xlink:href="#svg-ac08"></use></svg><svg class="u-svg-content" viewBox="0 0 16 16" x="0px" y="0px" id="svg-ac08"><path d="M14.5,3l-2.1,5H6.1L5.9,7.6L4,3H14.5 M0,0v1h2.1L5,8l-2,4h11v-1H4.6l1-2H13l3-7H3.6L2.8,0H0z M12.5,13
 	c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S13.3,13,12.5,13L12.5,13z M4.5,13C3.7,13,3,13.7,3,14.5S3.7,16,4.5,16
 	S6,15.3,6,14.5S5.3,13,4.5,13L4.5,13z"></path></svg><span class="u-color-var u-icon-circle u-shopping-cart-count" style="font-size: 0.75rem; --color-var: #a5c2a0;"><!--shopping_cart_count-->0<!--/shopping_cart_count--></span></span>
         </a><!--/shopping_cart-->
-        <div class="u-clearfix u-custom-html u-custom-html-1">
-          <style></style><!-- PayPal SDK --><!-- PayPal 按钮容器 -->
+        <div class="u-clearfix u-custom-html u-custom-html-1"><!-- 新购物车展示区域 -->
+          <h3>我的购物车</h3>
+          <ul id="custom-cart-items"></ul>
+          <p>总金额: $<span id="custom-cart-total">0.00</span>
+          </p><!-- PayPal SDK --><!-- PayPal 按钮容器 -->
           <div id="paypal-button-container"></div>
         </div>
       </div></header> 
