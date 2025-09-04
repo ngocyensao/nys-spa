@@ -46140,10 +46140,14 @@ a.u-link.u-text-hover-color-var:hover {
   font-weight: 700;
   font-size: 1rem;
   text-transform: uppercase;
-  background-image: none;
 }
 
 .u-header .u-nav-2 {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.u-header .u-nav-3 {
   font-weight: 400;
   font-size: 0.875rem;
 }
@@ -46152,12 +46156,17 @@ a.u-link.u-text-hover-color-var:hover {
   margin-top: 20px;
 }
 
-.u-header .u-nav-3 {
+.u-header .u-nav-4 {
   font-size: 1.25rem;
   margin-bottom: 0;
 }
 
-.u-header .u-nav-4 {
+.u-header .u-nav-5 {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.u-header .u-nav-6 {
   font-weight: 400;
   font-size: 0.875rem;
 }
@@ -46260,14 +46269,6 @@ a.u-link.u-text-hover-color-var:hover {
   .u-header .u-hamburger-link-1 {
     font-size: calc(1em + 16.5px);
     padding: 8px 10px;
-  }
-
-  .u-header .u-nav-2 {
-    font-size: 1.125rem;
-  }
-
-  .u-header .u-nav-4 {
-    font-size: 1.125rem;
   }
 
   .u-header .u-shopping-cart-1 {
