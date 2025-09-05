@@ -2,35 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.nys.vn/Home.html</loc>
-        <lastmod>2025-09-03T11:37:47+08:00</lastmod>
+        <lastmod>2025-09-05T08:59:27+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/index.html</loc>
-        <lastmod>2025-09-03T11:37:47+08:00</lastmod>
+        <lastmod>2025-09-05T08:59:27+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/Gallery.html</loc>
-        <lastmod>2025-09-02T23:04:27+08:00</lastmod>
+        <lastmod>2025-09-04T10:39:24+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/Pricing-Page.html</loc>
-        <lastmod>2025-09-02T23:00:37+08:00</lastmod>
+        <lastmod>2025-09-04T10:37:47+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/Services.html</loc>
-        <lastmod>2025-09-02T22:59:17+08:00</lastmod>
+        <lastmod>2025-09-04T10:36:13+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/About.html</loc>
-        <lastmod>2025-09-03T12:08:50+08:00</lastmod>
+        <lastmod>2025-09-04T10:40:16+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/Contact.html</loc>
-        <lastmod>2025-09-02T17:04:53+08:00</lastmod>
+        <lastmod>2025-09-04T10:39:40+08:00</lastmod>
     </url>
     <url>
-        <loc>https://www.nys.vn/Page-1.html</loc>
-        <lastmod>2025-09-02T23:29:38+08:00</lastmod>
+        <loc>https://www.nys.vn/Mens-Wipes.html</loc>
+        <lastmod>2025-09-05T00:04:20+08:00</lastmod>
+    </url>
+    <url>
+        <loc>https://www.nys.vn/paypal.html</loc>
+        <lastmod>2025-09-04T11:33:08+08:00</lastmod>
+    </url>
+    <url>
+        <loc>https://www.nys.vn/Product-list.html</loc>
+        <lastmod>2025-09-05T00:03:12+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/blog/post.html</loc>
@@ -58,7 +66,7 @@
     </url>
     <url>
         <loc>https://www.nys.vn/blog/blog.html</loc>
-        <lastmod>2025-09-03T12:09:03+08:00</lastmod>
+        <lastmod>2025-09-05T08:59:37+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/products/men-s-wet-wipes-2.html</loc>
@@ -73,20 +81,16 @@
         <lastmod>2025-09-02T23:25:57+08:00</lastmod>
     </url>
     <url>
+        <loc>https://www.nys.vn/products/girl-skirt.html</loc>
+        <lastmod>2025-09-02T13:01:46+08:00</lastmod>
+    </url>
+    <url>
         <loc>https://www.nys.vn/products/leather-gloves.html</loc>
         <lastmod>2025-09-02T13:01:46+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/products/men-s-wet-wipes-3.html</loc>
         <lastmod>2025-09-02T23:32:27+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://www.nys.vn/products/girl-skirt.html</loc>
-        <lastmod>2025-09-02T13:01:46+08:00</lastmod>
-    </url>
-    <url>
-        <loc>https://www.nys.vn/products/women-s-shoes.html</loc>
-        <lastmod>2025-09-02T13:01:46+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/products/men-s-t-shirt.html</loc>
@@ -97,8 +101,12 @@
         <lastmod>2025-09-02T13:01:46+08:00</lastmod>
     </url>
     <url>
+        <loc>https://www.nys.vn/products/women-s-shoes.html</loc>
+        <lastmod>2025-09-02T13:01:46+08:00</lastmod>
+    </url>
+    <url>
         <loc>https://www.nys.vn/products/products.html</loc>
-        <lastmod>2025-09-03T12:09:03+08:00</lastmod>
+        <lastmod>2025-09-05T08:59:38+08:00</lastmod>
     </url>
     <url>
         <loc>https://www.nys.vn/thank-you-page.html</loc>
