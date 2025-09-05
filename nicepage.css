@@ -46113,7 +46113,7 @@ a.u-link.u-text-hover-color-var:hover {
 }
 
 .u-header .u-sheet-1 {
-  min-height: 227px;
+  min-height: 93px;
 }
 
 .u-header .u-image-1 {
@@ -46174,7 +46174,7 @@ a.u-link.u-text-hover-color-var:hover {
 .u-header .u-shopping-cart-1 {
   height: 40px;
   width: 40px;
-  margin: -39px 52px 0 auto;
+  margin: -36px 152px 0 auto;
 }
 
 .u-header .u-icon-1 {
@@ -46183,8 +46183,8 @@ a.u-link.u-text-hover-color-var:hover {
 
 .u-header .u-custom-html-1 {
   height: auto;
-  min-height: 140px;
-  margin: -55px 0 60px 937px;
+  min-height: 84px;
+  margin: -58px 0 5px 996px;
 }
 @media (max-width: 1199px) {
   .u-header .u-shopping-cart-1 {
@@ -46193,12 +46193,14 @@ a.u-link.u-text-hover-color-var:hover {
   }
 
   .u-header .u-custom-html-1 {
-    margin: -55px 0 23px 737px;
+    margin-top: 20px;
+    margin-right: 0;
+    margin-left: 796px;
   }
 }
 @media (max-width: 991px) {
   .u-header .u-sheet-1 {
-    min-height: 150px;
+    min-height: 234px;
   }
 
   .u-header .u-image-1 {
@@ -46207,21 +46209,17 @@ a.u-link.u-text-hover-color-var:hover {
   }
 
   .u-header .u-menu-1 {
-    width: auto;
     margin-top: -49px;
-    margin-right: 60px;
   }
 
   .u-header .u-shopping-cart-1 {
     margin-top: -43px;
-    margin-right: 15px;
+    margin-right: 116px;
     margin-left: auto;
   }
 
   .u-header .u-custom-html-1 {
-    margin-top: 86px;
-    margin-bottom: 5px;
-    margin-left: 517px;
+    margin: -62px -28px 60px 604px;
   }
 }
 @media (max-width: 767px) {
@@ -46232,8 +46230,8 @@ a.u-link.u-text-hover-color-var:hover {
   }
 
   .u-header .u-menu-1 {
-    margin-top: -68px;
-    margin-right: 60px;
+    width: auto;
+    margin-top: 20px;
     margin-left: 20px;
   }
 
@@ -46247,9 +46245,7 @@ a.u-link.u-text-hover-color-var:hover {
   }
 
   .u-header .u-custom-html-1 {
-    margin-top: 54px;
-    margin-bottom: 1px;
-    margin-left: 337px;
+    margin: 54px -28px 1px 424px;
   }
 }
 @media (max-width: 575px) {
@@ -46265,7 +46261,6 @@ a.u-link.u-text-hover-color-var:hover {
 
   .u-header .u-menu-1 {
     margin-top: -51px;
-    margin-right: auto;
     margin-left: 17px;
   }
 
@@ -46282,9 +46277,9 @@ a.u-link.u-text-hover-color-var:hover {
   }
 
   .u-header .u-custom-html-1 {
-    margin-top: 86px;
+    margin-top: -62px;
     margin-bottom: 0;
-    margin-left: 137px;
+    margin-left: 224px;
   }
 }
  .u-footer {
