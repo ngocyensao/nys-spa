@@ -2020,4 +2020,12 @@
   .u-section-8 .u-image-1 {
     min-height: 258px;
   }
-}
+} .recaptcha-disclosure {
+    font-size: 12px;
+    color: #666;   /* 可选：让文字颜色更柔和 */
+    margin-top: 10px;
+  }
+  .recaptcha-disclosure a {
+    color: #0066cc;  /* 可选：链接颜色 */
+    text-decoration: underline;
+  }
