@@ -46248,16 +46248,271 @@ a.u-link.u-text-hover-color-var:hover {
 }
 
 .u-footer .u-sheet-1 {
-  min-height: 116px;
+  min-height: 591px;
+}
+
+.u-footer .u-layout-wrap-1 {
+  margin-top: 54px;
+  margin-bottom: 0;
+}
+
+.u-footer .u-layout-cell-1 {
+  min-height: 369px;
+}
+
+.u-footer .u-container-layout-1 {
+  padding: 30px 30px 30px 0;
+}
+
+.u-footer .u-image-1 {
+  width: 100px;
+  height: 100px;
+  margin: 0 326px 0 0;
+}
+
+.u-footer .u-logo-image-1 {
+  width: 100%;
+  height: 100%;
+}
+
+.u-footer .u-text-1 {
+  margin: 27px auto 0 0;
+}
+
+.u-footer .u-form-1 {
+  height: 147px;
+  margin: 27px 85px 0 0;
+}
+
+.u-footer .u-input-1 {
+  height: 50px;
+}
+
+.u-footer .u-btn-1 {
+  border-style: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-image: none;
+  --radius: 5px;
+  font-weight: 400;
+  --hover-color-var: #8aa586;
+  --active-color-var: #8aa586;
+  padding: 14px 20px;
+}
+
+.u-footer .u-layout-cell-2 {
+  min-height: 369px;
+}
+
+.u-footer .u-container-layout-2 {
+  padding: 30px;
+}
+
+.u-footer .u-text-2 {
+  margin: 0 auto 0 0;
+}
+
+.u-footer .u-btn-2 {
+  border-style: solid;
+  margin: 30px auto 0 0;
+  padding: 5px 0;
+}
+
+.u-footer .u-btn-3 {
+  border-style: solid;
+  margin: 15px auto 0 0;
+  padding: 5px 0;
+}
+
+.u-footer .u-btn-4 {
+  border-style: solid;
+  margin: 15px auto 0 0;
+  padding: 5px 0;
+}
+
+.u-footer .u-btn-5 {
+  border-style: solid;
+  margin: 15px auto 0 0;
+  padding: 5px 0;
+}
+
+.u-footer .u-layout-cell-3 {
+  min-height: 363px;
+}
+
+.u-footer .u-container-layout-3 {
+  padding: 30px;
+}
+
+.u-footer .u-text-3 {
+  margin: 0 auto 0 0;
+}
+
+.u-footer .u-text-4 {
+  font-size: 1rem;
+  margin: 30px 0 0;
+}
+
+.u-footer .u-text-5 {
+  font-size: 1rem;
+  margin: 20px auto 0 0;
+}
+
+.u-footer .u-btn-6 {
+  background-image: none;
+  padding: 0;
+}
+
+.u-footer .u-btn-7 {
+  background-image: none;
+  text-transform: none;
+  margin: 20px 145px 0 0;
+  padding: 0;
 }
 
 .u-footer .u-custom-html-1 {
-  margin-bottom: 60px;
+  height: auto;
+  min-height: 84px;
+  width: 851px;
+  margin: 0 auto 60px;
 }
+@media (max-width: 1199px) {
+  .u-footer .u-sheet-1 {
+    min-height: 593px;
+  }
 
+  .u-footer .u-layout-wrap-1 {
+    margin-top: -88px;
+  }
 
+  .u-footer .u-layout-cell-1 {
+    min-height: 304px;
+  }
 
+  .u-footer .u-image-1 {
+    margin-right: 265px;
+  }
 
+  .u-footer .u-form-1 {
+    margin-right: 25px;
+  }
+
+  .u-footer .u-btn-1 {
+    width: 100%;
+  }
+
+  .u-footer .u-layout-cell-2 {
+    min-height: 304px;
+  }
+
+  .u-footer .u-layout-cell-3 {
+    min-height: 299px;
+  }
+
+  .u-footer .u-btn-7 {
+    margin-right: 78px;
+  }
+
+  .u-footer .u-custom-html-1 {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .u-footer .u-sheet-1 {
+    min-height: 892px;
+  }
+
+  .u-footer .u-layout-wrap-1 {
+    margin-top: 161px;
+  }
+
+  .u-footer .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-footer .u-image-1 {
+    margin-right: 280px;
+  }
+
+  .u-footer .u-form-1 {
+    margin-right: 0;
+  }
+
+  .u-footer .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-footer .u-layout-cell-3 {
+    min-height: 100px;
+  }
+
+  .u-footer .u-container-layout-3 {
+    padding-left: 0;
+  }
+
+  .u-footer .u-btn-7 {
+    margin-right: 5px;
+  }
+
+  .u-footer .u-custom-html-1 {
+    width: 720px;
+    margin-top: 30px;
+    margin-bottom: -51px;
+  }
+}
+@media (max-width: 767px) {
+  .u-footer .u-sheet-1 {
+    min-height: 1189px;
+  }
+
+  .u-footer .u-layout-wrap-1 {
+    margin-top: 161px;
+  }
+
+  .u-footer .u-container-layout-1 {
+    padding-right: 10px;
+  }
+
+  .u-footer .u-image-1 {
+    margin-right: 405px;
+  }
+
+  .u-footer .u-container-layout-2 {
+    padding-right: 10px;
+    padding-left: 0;
+  }
+
+  .u-footer .u-container-layout-3 {
+    padding-right: 10px;
+  }
+
+  .u-footer .u-custom-html-1 {
+    width: 540px;
+    margin-bottom: -51px;
+  }
+}
+@media (max-width: 575px) {
+  .u-footer .u-sheet-1 {
+    min-height: 1255px;
+  }
+
+  .u-footer .u-layout-wrap-1 {
+    margin-top: 176px;
+  }
+
+  .u-footer .u-image-1 {
+    margin-right: 252px;
+  }
+
+  .u-footer .u-btn-7 {
+    margin-right: 0;
+  }
+
+  .u-footer .u-custom-html-1 {
+    width: 340px;
+    margin-bottom: -67px;
+  }
+}
 
  /*begin-variables custom-site-css*/.grecaptcha-badge { visibility: hidden !important; }  /* 合规隐藏方式 *//*end-variables custom-site-css*/
  /*begin-variables base-font-size*/ 

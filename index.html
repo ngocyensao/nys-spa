@@ -38,7 +38,6 @@
     
     
     
-    
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700">
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -65,7 +64,211 @@ grecaptcha.ready(function() {
         console.log(token);
     });
 });
-</script><meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+</script><meta name="referrer" content="origin"><script>
+    window.recaptchaRenderedV2 = false;
+    window.recaptchaFallback = false;
+    window.recaptchaSiteKeyV2 = '6LdTOLwrAAAAAG446KZ_AJjkSjYdg15kDfh3lbf7';
+
+    function gdprConfirmed() {
+        return true;
+    }
+
+    function dynamicLoadScript() {
+        var script = document.createElement('script');
+        script.src = 'https://www.google.com/recaptcha/api.js?render=6Lc4QLwrAAAAAKAIRUk_MomlDnoDuN38S8D7-u3D';
+        script.async = true;
+        script.onload = function () {
+            var event = new CustomEvent("recaptchaLoaded");
+            document.dispatchEvent(event);
+        };
+        document.body.appendChild(script);
+    }
+
+    function showRecaptchaError(error) {
+        error = error || '';
+        var formError = document.querySelector('.u-form-send-error');
+
+        if (formError) {
+            formError.innerText = 'Site Owner Error: ' + error.replace(/:[\s\S]*/, '');
+            formError.style.display = 'block';
+        }
+
+        console.error('Error in grecaptcha: ', error);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var confirmButtons = document.querySelectorAll('.u-cookies-consent .u-button-confirm');
+        confirmButtons.forEach(function (button) {
+            button.onclick = dynamicLoadScript;
+        });
+    });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            if (!gdprConfirmed()) {
+                return;
+            }
+            dynamicLoadScript();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("recaptchaLoaded", function() {
+            if (!gdprConfirmed()) {
+                return;
+            }
+
+            (function (grecaptcha, sitekey, actions) {
+                var recaptcha = {
+                    execute: function (action, submitFormCb) {
+                        if (typeof grecaptcha === 'undefined' || typeof grecaptcha.execute !== 'function') {
+                            showRecaptchaError('reCAPTCHA script failed to load.');
+                            return;
+                        }
+
+                        try {
+                            grecaptcha.execute(sitekey, {action: action}).then((token) => {
+                                if (!token) {
+                                    throw new Error('Empty token received from reCAPTCHA');
+                                }
+
+                                var forms = document.getElementsByTagName('form');
+
+                                for (var i = 0; i < forms.length; i++) {
+                                    var response = forms[i].querySelector('[name="recaptchaResponse"]');
+
+                                    if (!response) {
+                                        response = document.createElement('input');
+                                        response.setAttribute('type', 'hidden');
+                                        response.setAttribute('name', 'recaptchaResponse');
+                                        forms[i].appendChild(response);
+                                    }
+
+                                    response.value = token;
+                                }
+
+                                submitFormCb();
+                            }).catch((e) => {
+                                showRecaptchaError(e.message);
+                            });
+                        } catch (e) {
+                            showRecaptchaError(e.message);
+                        }
+                    },
+
+                    executeContact: function (submitFormCb) {
+                        recaptcha.execute(actions['contact'], submitFormCb);
+                    }
+                };
+
+                window.recaptchaObject = recaptcha;
+                window.grecaptchaObject = grecaptcha;
+            })(
+                grecaptcha,
+                
+                '6Lc4QLwrAAAAAKAIRUk_MomlDnoDuN38S8D7-u3D',
+                {'contact': 'contact'}
+            );
+        });
+    </script>
+
+    <script>
+    window.showRecaptchaV2 = function (form) {
+        if (!form || !form.length) {
+            return;
+        }
+        if (typeof window.grecaptchaObject === 'undefined' || !window.grecaptchaObject) {
+            return;
+        }
+
+        const formEl = form[0];
+
+        let container = document.getElementById('recaptcha-v2-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'recaptcha-v2-container';
+            formEl.parentElement.appendChild(container);
+        }
+
+        let tokenReceived = false;
+        let timeoutHandle;
+
+        if (window.recaptchaRenderedV2 === false || typeof window.recaptchaRenderedV2 === 'undefined') {
+            window.recaptchaRenderedV2 = window.grecaptchaObject.render('recaptcha-v2-container', {
+                'sitekey': window.recaptchaSiteKeyV2,
+                'size': 'invisible',
+                'callback': function (token) {
+                    clearTimeout(timeoutHandle);
+
+                    if (!token) {
+                        showRecaptchaError('reCAPTCHA v2 token was empty. Please try again.');
+                        return;
+                    }
+
+                    tokenReceived = true;
+
+                    let recaptchaResponseV2 = formEl.querySelector('input[name="recaptchaResponseV2"]');
+
+                    if (!recaptchaResponseV2) {
+                        recaptchaResponseV2 = document.createElement('input');
+                        recaptchaResponseV2.type = 'hidden';
+                        recaptchaResponseV2.name = 'recaptchaResponseV2';
+                        formEl.appendChild(recaptchaResponseV2);
+                    }
+
+                    recaptchaResponseV2.value = token;
+
+                    if (window.recaptchaSiteKeyV2) {
+                        let siteKeyInput = formEl.querySelector('input[name="siteKey"]');
+
+                        if (siteKeyInput) {
+                            siteKeyInput.value = window.recaptchaSiteKeyV2;
+                        }
+                    }
+
+                    document.querySelectorAll('.u-form-send-error').forEach(el => {
+                        el.style.display = 'none';
+                    });
+
+                    const event = new CustomEvent('submit', {
+                        detail: { recaptchaPassed: true },
+                        bubbles: true,
+                        cancelable: true,
+                    });
+
+                    formEl.dispatchEvent(event);
+                },
+                'error-callback': function () {
+                    clearTimeout(timeoutHandle);
+                    showRecaptchaError('reCAPTCHA v2 error. Please try again.');
+                },
+                'expired-callback': function () {
+                    clearTimeout(timeoutHandle);
+                }
+            });
+
+            window.grecaptchaObject.reset(window.recaptchaRenderedV2);
+
+            setTimeout(() => {
+                window.grecaptchaObject.execute(window.recaptchaRenderedV2);
+            }, 300);
+
+            timeoutHandle = setTimeout(function () {
+                if (!tokenReceived) {
+                    showRecaptchaError('The Contact Form could not be submitted because Google reCAPTCHA v3 detected unusual activity from your connection. Please try again later, or complete the reCAPTCHA v2 challenge if it appears.');
+                }
+            }, 120000);
+        } else {
+            window.grecaptchaObject.reset(window.recaptchaRenderedV2);
+
+            setTimeout(() => {
+                window.grecaptchaObject.execute(window.recaptchaRenderedV2);
+            }, 300);
+        }
+    };
+    </script>
+<meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
   <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="true" class="u-body u-clearfix u-xl-mode" data-lang="en"><!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id= GTM-TVF7C9N6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) --><header class="u-clearfix u-header u-sticky u-sticky-2cdd u-white u-header" id="sec-8229"><div class="u-clearfix u-sheet u-valign-middle-sm u-sheet-1">
@@ -385,9 +588,61 @@ grecaptcha.ready(function() {
     
     
     
-    <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer" id="sec-abf8"><div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1">
-          <style></style>
+    <footer class="u-align-center u-black u-border-2 u-border-grey-60 u-border-no-bottom u-border-no-left u-border-no-right u-clearfix u-container-align-center u-footer u-footer" id="sec-abf8"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-sheet-1">
+        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-size-24-lg u-size-24-xl u-size-33-md u-size-33-sm u-size-33-xs u-layout-cell-1">
+                <div class="u-container-layout u-valign-top u-container-layout-1">
+                  <a href="" class="u-image u-logo u-image-1" data-image-width="816" data-image-height="815">
+                    <img src="images/_2025-09-02_142639_1641.png" class="u-logo-image u-logo-image-1">
+                  </a>
+                  <h4 class="u-align-left u-text u-text-default u-text-1"> Join Our Newsletter</h4>
+                  <div class="custom-expanded u-align-left u-form u-form-1">
+                    <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-21 u-form-vertical u-inner-form" style="padding: 1px;" source="email" name="form">
+                      <div class="u-form-email u-form-group u-label-none">
+                        <label for="email-5a14" class="u-label">Email</label>
+                        <input type="email" placeholder="Enter a valid email address" id="email-5a14" name="email" class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle u-none u-input-1" required="">
+                      </div>
+                      <div class="u-align-center u-form-group u-form-submit u-label-none">
+                        <a href="#" class="u-active-color-var u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-color-var u-radius u-white u-btn-1"> Send Message</a>
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                      </div>
+                      <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                      <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+                      <input type="hidden" value="" name="recaptchaResponse">
+                      <input type="hidden" name="formServices" value="8fb6bb94-dec5-d3b5-1a26-ff8e2db2ede4">
+                      <input type="hidden" name="siteKey" value="6Lc4QLwrAAAAAKAIRUk_MomlDnoDuN38S8D7-u3D">
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="u-container-align-left u-container-style u-layout-cell u-size-18-lg u-size-18-xl u-size-27-md u-size-27-sm u-size-27-xs u-layout-cell-2">
+                <div class="u-container-layout u-valign-top u-container-layout-2">
+                  <h4 class="u-align-left u-text u-text-default u-text-2"> Quick Links</h4>
+                  <a href="#" class="u-align-left u-border-1 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-none u-text-body-alt-color u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""> Spa Services</a>
+                  <a href="#" class="u-align-left u-border-1 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-none u-text-body-alt-color u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""> Med SPA Services</a>
+                  <a href="#" class="u-align-left u-border-1 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-none u-text-body-alt-color u-btn-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""> Salon Services</a>
+                  <a href="#" class="u-align-left u-border-1 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-none u-text-body-alt-color u-btn-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""> Nail Services</a>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-shape-rectangle u-size-18-lg u-size-18-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-3">
+                <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-3">
+                  <h4 class="u-align-left u-text u-text-default u-text-3">Contact Us</h4>
+                  <p class="u-align-left u-text u-text-4"><span class="u-icon u-text-palette-1-light-1"><svg class="u-svg-content" viewBox="0 0 54.757 54.757" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+	L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M27.557,26c-3.859,0-7-3.141-7-7s3.141-7,7-7s7,3.141,7,7
+	S31.416,26,27.557,26z"></path></svg></span>&nbsp;​​11 Vân Đồn, Phường Nại Hiên Đông, Quận Sơn Trà, Đà Nẵng VN
+                  </p>
+                  <p class="u-align-left u-text u-text-default u-text-5"><span class="u-file-icon u-icon u-text-palette-1-light-1"><img src="images/1257-7113d5f6.png" alt=""></span>&nbsp; <a href="tel:+1234567890" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-body-alt-color u-text-hover-palette-1-base u-btn-6">+84 097 14 36380</a>
+                  </p>
+                  <a href="mailto:hi@email.com" class="u-active-none u-align-left u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-palette-1-base u-text-body-alt-color u-text-hover-palette-1-base u-btn-7"><span class="u-file-icon u-icon u-text-palette-1-light-1"><img src="images/2099199-980dfc25.png" alt=""></span>&nbsp;support@nys.vn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-clearfix u-custom-html u-custom-html-1">
           <p class="recaptcha-disclosure"> This site is protected by reCAPTCHA and the Google <a href=" " target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply. 
           </p>
         </div>
