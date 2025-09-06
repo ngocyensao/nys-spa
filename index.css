@@ -2020,4 +2020,4 @@
   .u-section-8 .u-image-1 {
     min-height: 258px;
   }
-}
+}.grecaptcha-badge { visibility: hidden !important; }  /* 合规隐藏方式 */
