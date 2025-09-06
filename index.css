@@ -1,5 +1,5 @@
 .u-section-1 .u-sheet-1 {
-  min-height: 974px;
+  min-height: 995px;
 }
 
 .u-section-1 .u-shape-1 {
@@ -7,12 +7,12 @@
   height: 593px;
   background-image: none;
   --color-var: #8aa586;
-  margin: 0 0 0 auto;
+  margin: 20px 0 0 auto;
 }
 
 .u-section-1 .u-layout-wrap-1 {
   width: 1090px;
-  margin: -593px auto 100px 0;
+  margin: -569px auto 60px 0;
 }
 
 .u-section-1 .u-layout-cell-1 {
@@ -120,7 +120,6 @@
   .u-section-1 .u-layout-wrap-1 {
     width: 902px;
     margin-top: -498px;
-    margin-bottom: 60px;
   }
 
   .u-section-1 .u-layout-cell-1 {
